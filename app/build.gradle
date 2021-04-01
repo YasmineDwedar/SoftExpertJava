@@ -26,6 +26,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    dataBinding{
+        enabled=true
+    }
 }
 
 dependencies {
@@ -36,7 +39,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    //NetworkResponseAdapter
+   // NetworkResponseAdapter
     implementation "com.github.haroldadmin:NetworkResponseAdapter:4.1.0"
 
     //Retrofit and GSON
@@ -46,8 +49,11 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
 
 // ViewModel and LiveData
-    def lifecycle_version = "2.1.0"
+    def lifecycle_version = "2.2.0"
+//    def lifecycle_version = "2.1.0"
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
 
 //recyclerview
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
@@ -57,6 +63,13 @@ dependencies {
 //glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    //huda
+    //lifecycle of viewmodel
+
+    //????
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
 
 
 }
